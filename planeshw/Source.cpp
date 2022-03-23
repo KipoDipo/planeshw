@@ -1,46 +1,9 @@
 #include <iostream>
 #include <fstream>
+#include "Plane.h"
 #define FILE_PATH "Planes.db"
 
 using namespace std;
-
-class Plane
-{
-private:
-	long long int Flights;
-	long long int ID;
-	char FirstName[256];
-	char LastName[256];
-public:
-	Plane()
-	{
-	}
-	Plane(long long int ID, char* Name, char* Type, long long int Flights)
-	{
-		this->ID = ID;
-		strcpy_s(FirstName, Name);
-		strcpy_s(LastName, Type);
-		this->Flights = Flights;
-	}
-	long long int GetID()
-	{
-		return ID;
-	}
-	void Print()
-	{
-		cout << ID << " " << FirstName << " " << LastName << " " << Flights << endl;
-	}
-};
-
-Plane CreatePlane()
-{
-	long long int id;
-	char name[256];
-	char type[256];
-	long long int flights;
-	cin >> id >> name >> type >> flights;
-	return Plane(id, name, type, flights);
-}
 
 int GetElementCountFromFile(ifstream& stream, int sizeOfClass)
 {
