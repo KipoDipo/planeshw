@@ -29,7 +29,7 @@ int main()
 		cin >> command;
 		if (strcmp(command, "create") == 0)
 		{
-			Plane newPlane = CreatePlane();
+			Plane newPlane = CreatePlaneFromInput();
 			outFile.write(reinterpret_cast<const char*>(&newPlane), sizeof(newPlane));
 			cout << "Record saved!\n";
 		}

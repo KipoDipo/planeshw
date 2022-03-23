@@ -29,7 +29,7 @@ public:
 	}
 };
 
-Plane CreatePlane()
+Plane CreatePlaneFromInput()
 {
 	long long int id;
 	char name[256];
